@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth; /* плавная прокрутка */
+  }
+  
+  body {
+    margin: 0;
+    box-sizing: border-box; /*браузер изменит принцип расчёта и padding с border уже будут включены в width и height */
+    font-family: sans-serif;
+  
+    --header-height: 60px;
+    --footer-height: 60px;
+    --button-height:50px;
+    --button-width: 50px;
+  }
+  
+  .main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+  
+  .section {
+    padding: 20px;
+  }
+
+  .section__title{
+    position: sticky;
+    display: inline;
+    margin: 0 0 16px;
+    padding: 10px;
+    border-radius: 7%;
+    z-index: 0;
+    top: var(--header-height);
+    background-color: #e2bebe;
+    padding-left: 0;
+  }
+
+  .section__content{
+    padding-left: 130px;
+    text-align: justify;
+  }
+  
+  .container {
+    min-width: 500px;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 500px;
+    background-color: cornsilk;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid gainsboro;
+  }
+  
+  .footer {
+    background-color: #444;
+    text-align: center;
+    line-height: var(--footer-height);
+    color: #fff;
+    height: var(--footer-height);
+  }
+  
+  .logo {
+    display: inline-block; /*элемент, который продолжает находиться в строке ( inline ), но при этом может иметь важные свойства блока*/
+    margin-right: 40px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    color: #fff;
+  }
+  
+  .nav {
+    position: sticky; /*«прилипающие» элементы, которые остаются на своем месте при прокрутке страницы до тех пор, пока они полностью не исчезнут из виду*/
+    text-align: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .nav__link:link { /*позволяет вам выбирать и стилизовать ссылки внутри элементов.*/
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav__link:visited { /*псевдо-класс visited используется для посетивших ссылок*/
+    color: #c38686;
+  }
+
+  .nav__link:hover{
+    color: #fff;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .scrollTop{
+    position: fixed; /*фиксация елемента на экране*/
+    display: block;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    right: 32px; /*фиксация кнопки справа */
+    bottom: 64px; /*фиксация кнопки сверху*/
+    border-radius: 15%; /*округление углов*/
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    width: var(--button-width);
+    height: var(--button-height);
+  }
